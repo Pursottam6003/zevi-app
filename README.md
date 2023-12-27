@@ -35,11 +35,8 @@ Use of SASS for writing modular styles, using sass variables, functions and mixi
 
 
 ### Links
-Frontend hosted at: https://pursottam-yoga-app.netlify.app/
+Frontend hosted at: https://pursottam6003-zevi.netlify.app/
 
-Note: API Integration with frontend is completed but due to some issue with the backend server it is not working properly.
-
-Backend hosted at: https://flexmoney-app-production.up.railway.app/
 
 ![Alt text](public/image12.png)
 ## Solution Approach
