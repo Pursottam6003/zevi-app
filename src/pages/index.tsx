@@ -1,5 +1,5 @@
-import Home from './Home'
-import Products from './Products'
+import Home from './Home/Home'
+// import Products from './dump/Products'
 
 
-export { Home, Products }
+export { Home }

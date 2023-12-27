@@ -2,16 +2,19 @@
 import React from 'react'
 import './home.css'
 
-import { Logo, Search } from '../assets/images/'
+import { Logo, Search } from '../../assets/images/'
+
+import LogoContainer from '../../components/LogoContainer/LogoContainer'
 
 const Home: React.FC = () => {
 
     return (
         <>
             <div className="home">
-                <div className="home-logo">
+                {/* <div className="home-logo">
                     <img src={Logo} alt="" />
-                </div>
+                </div> */}
+                <LogoContainer />
                 <div className='home-search-parent'>
 
                     <div className="home-search">

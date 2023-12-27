@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo, Search } from "../assets/images";
+import { Logo, Search } from "../../assets/images";
 
 import "./products.css";
 const Products: React.FC = () => {
