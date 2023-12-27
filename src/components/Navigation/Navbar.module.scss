@@ -1,0 +1,32 @@
+.navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: var(--app-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .logoWrapper {
+        .logo {
+            height: 1.8rem;
+        }
+    }
+}
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@media screen and (max-width: $md) {
+    .navContainer {
+        .logoWrapper {
+            .logo {
+                height: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+.searchSuggestions {
+    position: relative;
+    --px: 0.75rem;
+    .searchSuggestionBox {
+        position: relative;
+        z-index: 1;
+        border-radius: 0.25rem;
+        background: #FFF;
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+        width: calc(60vw + 4rem);
+        max-width: calc(55rem + 4rem);
+        margin: auto;
+        padding: calc(var(--px) * 2.2);
+
+        h2 {
+            font-size: calc(var(--px) * 1.5);
+            font-weight: 500;
+            margin-bottom: calc(var(--px) * 1.5);
+        }
+    }
+
+    .searchSuggestionOverlay {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+     @media screen and (max-width: $md) {
+        .searchSuggestionBox {
+            width: 80vw;
+        }
+    }
+    @media screen and (max-width: $sm) {
+        .searchSuggestionBox {
+            width: 100%;
+        }
+    }
+}

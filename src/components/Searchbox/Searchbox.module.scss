@@ -1,0 +1,56 @@
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+.searchBox {
+    --py: 0.75rem;
+    --px: calc(var(--py) * 1.84);
+    --font-size: calc(var(--py) * 1.6);
+    margin-bottom: calc(0.8 * var(--px));
+    z-index: 10;
+    position: relative;
+
+    label {
+        position: relative;
+        display: flex;
+        width: 60vw;
+        max-width: 55rem;
+        margin: auto;
+
+        input {
+            width: 100%;
+            border: none;
+            padding: var(--py) var(--px);
+            font-size: var(--font-size);
+            border-radius: var(--py);
+            outline: none;
+            font-weight: 500;
+        }
+
+        .action {
+            position: absolute;
+            top: 50%;
+            right: var(--px);
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+        }
+
+        svg {
+            color: var(--text-color);
+            height: 1.8rem;
+        }
+    }
+
+    @media screen and (max-width: $md) {
+        label {
+            width: 80vw;
+        }
+    }
+    @media screen and (max-width: $sm) {
+        label {
+            width: 100%;
+        }
+    }
+}

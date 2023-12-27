@@ -1,22 +1,23 @@
 .home {
-    min-height: 100vh;
-    width: 100vw;
+    height: 100vh;
+    --overlay: rgba(215, 224, 255, 0.26);
+    background: linear-gradient(0deg, var(--overlay) 0%, var(--overlay) 100%), url('../../assets/images/background_home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
 }
 
-
 .home_content {
-    padding: 2rem 0 0.5rem 0;
+    padding: 4rem 0 0.5rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    width: 100vw;
 }
 
 .input_container {
     width: 35rem;
-    max-width: 90vw;
+    max-width: 100%;
+    // max-width: 90vw;
     display: flex;
     gap: 1rem;
     margin: auto;
@@ -54,7 +55,8 @@
 .latest_trend_products {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.8rem;
+    gap: 1.2rem;
+    align-items: start;
 }
 
 .category_title {
@@ -69,29 +71,35 @@
     gap: 0.5rem;
     justify-content: center;
     cursor: pointer;
+    --px: 0.75rem;
+    margin-bottom: calc(var(--px) * 2.2);
 
-    &:hover {
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
+    // &:hover {
+    //     transform: scale(1.1);
+    //     transition-duration: 0.5s;
+    // }
 
     img {
         border-radius: 0.2rem;
-        width: 10rem;
+        width: 100%;
     }
 
     div {
         font-size: 0.8rem;
+        font-weight: 300;
     }
 }
 
 .suggestion_product {
     cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
 
-    &:hover {
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
+    // &:hover {
+    //     transform: scale(1.1);
+    //     transition-duration: 0.5s;
+    // }
 }
 
 @media screen and (max-width: 1000px) {

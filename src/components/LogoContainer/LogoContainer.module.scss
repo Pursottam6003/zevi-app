@@ -1,13 +1,14 @@
 .home_header {
+    padding: 2rem;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem;
+    // padding-right: 2rem;
     position: relative;
 
     img {
         width: 86px;
         height: 44.69px;
-        position: absolute;
+        // position: absolute;
         top: 40px;
         transform: scale(1); // No scaling needed for the original size
         mix-blend-mode: multiply;

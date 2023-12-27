@@ -1,0 +1,40 @@
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+:root {
+    --app-padding: 2rem;
+
+    @media screen and (max-width: $lg) {
+        --app-padding: 1.6rem;
+    }
+    @media screen and (max-width: $md) {
+        --app-padding: 1.2rem;
+    }
+    @media screen and (max-width: $sm) {
+        --app-padding: 1rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    padding-top: 10rem;
+    padding-left: var(--app-padding);
+    padding-right: var(--app-padding);
+
+    @media screen and (max-width: $md) {
+        padding-top: 8rem;
+    }
+    @media screen and (max-width: $sm) {
+        padding-top: 6rem;
+    }
+    @media screen and (max-width: $sm) {
+        padding-top: 4rem;
+    }
+}

@@ -14,7 +14,6 @@ const ProductsNavBar = () => {
                     <RiSearch2Line size="24" />
                 </button>
             </form>
-            <img src={Logo} alt="" />
         </div>
     );
 };
