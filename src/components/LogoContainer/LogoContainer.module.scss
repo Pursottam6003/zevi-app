@@ -1,5 +1,15 @@
 .home_header {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding-right: 2rem;
+    position: relative;
+
+    img {
+        width: 86px;
+        height: 44.69px;
+        position: absolute;
+        top: 40px;
+        transform: scale(1); // No scaling needed for the original size
+        mix-blend-mode: multiply;
+    }
 }
