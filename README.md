@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Zevi Frontend Internship Assignment 
+> This repo contains code for internship task @zevi 2023 Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Alt text](image-1.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+## React Dev Assignment -
+1. You have to develop a demo react app (for mobile and web). Set up a React project using CRA and if you know TypeScript and SASS, use them - you’ll earn bonus points 
+2. The app is a simplified search app with following requirements: 
+Click on the search tab latest trend suggestion box open 
+3. Implement faker api for showing data. 
+According to the filter data should update. 
+4. Click on the Wishlist colour should change to red 
+On hovering to the product view product button should be visible.
+5. The look & feel should match the design specs mentioned in this link here
+Use atomic commits; so commit as much as you can!!
+6. You have to use functional react components with hooks (No class components at all!!!)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Submission
+1. Create a github repo and give access to xxxx [sorry for secuiry purpose we can't share the email id]   Deploy your app using netlify
+2. Once done, send us an email (with the link to the github repo you used for assignment). Also mention the link of the app deployed using netlify.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How you’ll be scored:
+* Finishing each requirement as mentioned above with as minimum bugs as possible
+* Modularity - write reusable components as much as possible.
+* How you have structured your project, your folder structure should be simple enough for anyone to go through your code. Use standards followed in most react projects.
+* Readability of code, using homogeneous naming conventions (variable names should be self explanatory) and following general best practices
+Correct git branching and frequent commits
+Final result looks exactly as the given design and similar on different screen sizes
+>Bonus Points:
+Use of typescript
+Minimum use of any, if using TS
+Use of SASS for writing modular styles, using sass variables, functions and mixins
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
+Frontend hosted at: https://pursottam-yoga-app.netlify.app/
 
-### `npm run build`
+Note: API Integration with frontend is completed but due to some issue with the backend server it is not working properly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend hosted at: https://flexmoney-app-production.up.railway.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Alt text](public/image12.png)
+## Solution Approach
+1. The initial step involves creating a form with an aesthetically pleasing UI for uploading user details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. For the backend, it is crucial to design an architecture to store user details. The focus is on defining the structure and components of the backend architecture.
 
-### `npm run eject`
+3. To establish a seamless connection between the frontend and backend, an Entity-Relationship diagram needs to be created. This diagram aids in comprehending the relationships between entities and serves as a guide for developing APIs to facilitate communication between the frontend and backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technologies Used
+* ReactJS -cra temmplate
+* TypeScript
+* SASS 
+* NodeJS
+* Faker API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
+* Clone the repository
 
-## Learn More
+```bash
+git clone "https://github.com/Pursottam6003/zevi-app"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+* Install the dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+Note : If it shows any error then only try to install the dependencies one by one using the following commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install --force 
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Run the frontend server
 
-### Making a Progressive Web App
+```bash
+npm start
+```
+* Open the browser and go to http://localhost:3000 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Archietecture 
+ It contains mainly frontend and we are using the faker api to generate the
+    fake data and we are using the react hooks to manage the state of the application.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Screenshorts 
 
-### Deployment
+To check the form validation here i have done the following checks 
+* Latest trend suggestion box open
+* ![Alt text](image-2.png)
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* According to the filter data should update.
+![Alt text](image-3.png)
 
-### `npm run build` fails to minify
+* Its also responsive for mobile view
+![Alt text](image-4.png)
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@Pursottam6003](https://www.github.com/Pursottam6003)
+- https://www.linkedin.com/in/pursottamsah/
+- https://pursottam.github.io/
+
+
