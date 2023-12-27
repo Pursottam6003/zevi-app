@@ -4,6 +4,7 @@ import { RatingBox } from "../../../assets/Icons/RatingBox";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 import { useNavigate } from "react-router-dom";
+import styles from "./ProductsItems.module.scss"
 
 interface ProductItemType {
     product: ProductType;
@@ -16,9 +17,9 @@ const ProductsItem = ({ product }: ProductItemType) => {
     const navigate = useNavigate();
 
     return (
-        <div className="product_item">
-            <div className="product_img_container">
-                <div className="wishlist_icon_container">
+        <div className={styles.product_item}>
+            <div className={styles.product_img_container}>
+                <div className={styles.wishlist_icon_container}>
                     {isInWishlist ? (
                         <AiFillHeart
                             color="red"
@@ -32,7 +33,7 @@ const ProductsItem = ({ product }: ProductItemType) => {
                     )}
                 </div>
                 <img
-                    className="product_img"
+                    className={styles.product_img}
                     src={product.productImg}
                     alt=""
                     onMouseOver={() => setShowViewProduct(true)}
@@ -42,7 +43,7 @@ const ProductsItem = ({ product }: ProductItemType) => {
                     <div
                         onMouseOver={() => setShowViewProduct(true)}
                         onMouseOut={() => setShowViewProduct(false)}
-                        className="view_product"
+                        className={styles.view_product}
                         onClick={() => navigate("/")}
                     >
                         View Product
@@ -51,10 +52,10 @@ const ProductsItem = ({ product }: ProductItemType) => {
             </div>
             <div>{product.productName}</div>
             <div>
-                <span className="org_price">Rs. {product.productOrgPrice} </span>
-                <span className="dis_price">Rs. {product.productDisPrice} </span>
+                <span className={styles.org_price}>Rs. {product.productOrgPrice} </span>
+                <span className={styles.dis_price}>Rs. {product.productDisPrice} </span>
             </div>
-            <div className="rating_and_reviews_container">
+            <div className={styles.rating_and_reviews_container}>
                 {RatingBox(product.productRating)} ({product.productsReviews})
             </div>
         </div>

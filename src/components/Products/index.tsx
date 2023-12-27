@@ -1,7 +1,7 @@
-import ProductsItem from "./ProductsItem";
-import ProductsNavBar from "./ProductsNavbar";
-import ProductsResults from "./ProductsResults";
+import ProductsItem from "./product-items/ProductsItem";
+import ProductsNavBar from "./product-nav/ProductsNavbar";
+import ProductsResults from "./product-results/ProductsResults";
 
-import "./Products.module.scss"
+
 
 export { ProductsItem, ProductsNavBar, ProductsResults }

@@ -1,8 +1,8 @@
 import React from "react";
-import "./ProductsResults.scss";
 
-import { ProductType } from "../../assets/data/FakerData";
-import ProductsItem from "./ProductsItem";
+import { ProductType } from "../../../assets/data/FakerData";
+import ProductsItem from "../product-items/ProductsItem";
+import styles from "./ProductResults.module.scss"
 
 interface ProductsInterface {
     products: ProductType[];
@@ -12,9 +12,9 @@ const ProductsResults = ({ products }: ProductsInterface) => {
     return (
         <>
             {products.length <= 0 ? (
-                <div className="no_results">No Results Found !!!</div>
+                <div className={styles.no_results}>No Results Found !!!</div>
             ) : (
-                <div className="product_results_container">
+                <div className={styles.product_results_container}>
                     {products.map((product, i) => {
                         return <ProductsItem key={i} product={product} />;
                     })}
