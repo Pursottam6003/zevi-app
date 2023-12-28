@@ -43,6 +43,8 @@ const Searchbox: React.FC<SearchboxProps> = ({
           <input
             onClick={handleClick}
             name="q"
+            autoComplete="off"
+            autoCorrect="off"
             type="text"
             placeholder="Search"
           />
