@@ -13,10 +13,12 @@ export interface ProductType {
     productImg: string;
     productName: string;
     productRating: number;
+    productBrand: string;
     productOrgPrice: number;
     productDisPrice: number;
     productsReviews: number;
 }
+const brands: string[] = [...Array(10)].map(() => faker.company.name());
 
 export const fetchLatestTrendData = () => {
     const latestTrends: LatestTrendType[] = [];
@@ -52,6 +54,7 @@ export const fetchProducts = () => {
             width: 300,
         });
         const productName = faker.commerce.productName();
+        const productBrand = brands[faker.helpers.rangeToNumber({ min: 0, max: 9 })];
         const productRating = faker.number.int({ min: 1, max: 5 });
         const productOrgPrice = Number(
             faker.commerce.price({ min: 300, max: 5000 })
@@ -67,6 +70,7 @@ export const fetchProducts = () => {
         products.push({
             productImg,
             productName,
+            productBrand,
             productRating,
             productOrgPrice,
             productDisPrice,

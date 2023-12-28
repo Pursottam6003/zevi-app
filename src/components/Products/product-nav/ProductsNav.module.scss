@@ -1,58 +1,58 @@
-// navbar 
-.products_navbar {
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    gap: 0.5rem;
-    padding: 1rem;
-    padding-top: 2rem;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
 
-    img {
-        padding-bottom: 1rem;
-    }
-}
+.searchBox {
+    --py: 0.75rem;
+    --px: calc(var(--py) * 1.84);
+    --font-size: calc(var(--py) * 1.6);
+    margin-top: 2rem;
+    margin-bottom: calc(0.8 * var(--px));
+    z-index: 10;
+    position: relative;
 
-.input_container {
-    // width: 35rem;
-    max-width: 90vw;
-    display: flex;
-    gap: 1rem;
-    margin: auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    border: 1px solid rgb(121, 120, 120);
-
-    .home_input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        font-size: 1.2rem;
-    }
-
-    .search_icon_container {
-        cursor: pointer;
-        border: none;
-        background: transparent;
-        padding: auto;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .products_navbar {
+    label {
+        position: relative;
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 0.5rem;
+        width: 60vw;
+        max-width: 40rem;
+        margin: auto;
 
-        img {
-            width: 5rem;
+        input {
+            width: 100%;
+            border: 1px solid gray;
+            padding: var(--py) var(--px);
+            font-size: var(--font-size);
+            border-radius: var(--py);
+            outline: none;
+            font-weight: 500;
+        }
+
+        .action {
+            position: absolute;
+            top: 50%;
+            right: var(--px);
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+        }
+
+        svg {
+            color: var(--text-color);
+            height: 1.8rem;
         }
     }
 
-    .input_container {
-        width: auto;
+    @media screen and (max-width: $md) {
+        label {
+            width: 50vw;
+        }
+    }
+
+    @media screen and (max-width: $sm) {
+        label {
+            width: 45vw;
+        }
     }
 }

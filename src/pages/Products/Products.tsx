@@ -36,75 +36,52 @@ const Products = () => {
     }, []);
 
     useEffect(() => {
-        let filteredData: ProductType[] = [];
-
-        let filter1Applied = false;
-        let filter2Applied = false;
-        let filter3Applied = false;
+        let filteredData: ProductType[] = [...tempProducts];
 
         if (multipleFilters.brand.includes(true)) {
-            if (multipleFilters.brand[0]) {
-                tempProducts.forEach((product) => {
-                    if (product.productName === "Incredible Frozen Table")
-                        filteredData.push(product);
+            filteredData = filteredData.filter((product) => {
+                return multipleFilters.brand.some((filter, index) => {
+                    if (filter && product.productName.includes(product.productBrand[index])) {
+                        return true;
+                    }
+                    return false;
                 });
-            }
-            if (multipleFilters.brand[1]) {
-                tempProducts.forEach((product) => {
-                    if (product.productName === "Tasty Wooden Car")
-                        filteredData.push(product);
-                });
-            }
-            filter1Applied = true;
+            });
         }
 
         if (multipleFilters.rating.includes(true)) {
-            for (let i = 0; i < multipleFilters.rating.length; i++) {
-                if (multipleFilters.rating[i]) {
-                    tempProducts.forEach((product) => {
-                        if (product.productRating === i + 1) {
-                            filteredData.push(product);
-                        }
-                    });
-                }
-            }
-            filter2Applied = true;
-        }
-
-        if (multipleFilters.price[0]) {
-            tempProducts.forEach((product) => {
-                if (product.productDisPrice < 500) {
-                    filteredData.push(product);
-                }
+            filteredData = filteredData.filter((product) => {
+                return multipleFilters.rating.some((filter, index) => {
+                    if (filter && product.productRating === index + 1) {
+                        return true;
+                    }
+                    return false;
+                });
             });
-
-            filter3Applied = true;
         }
 
-        if (multipleFilters.price[1]) {
-            tempProducts.forEach((product) => {
+        if (multipleFilters.price.includes(true)) {
+            filteredData = filteredData.filter((product) => {
                 if (
-                    product.productDisPrice >= 1000 &&
-                    product.productDisPrice <= 3000
+                    (multipleFilters.price[0] && product.productDisPrice < 500) ||
+                    (multipleFilters.price[1] &&
+                        product.productDisPrice >= 1000 &&
+                        product.productDisPrice <= 3000)
                 ) {
-                    filteredData.push(product);
+                    return true;
                 }
+                return false;
             });
-            filter3Applied = true;
         }
 
-        if (filter1Applied || filter2Applied || filter3Applied) {
-            setProducts(filteredData);
-        } else {
-            setProducts(tempProducts);
-        }
+        setProducts(filteredData);
     }, [multipleFilters, tempProducts]);
 
-    console.log(multipleFilters);
-
+    console.log(products)
+    console.log(tempProducts)
     return (
         <div className={styles.products_page}>
-            <ProductsNavBar />
+            <ProductsNavBar products={products} setFilteredProducts={setProducts} />
             <h2>Search Results</h2>
             <div className={styles.filter_and_result_container}>
                 <div className={styles.filter_container}>
@@ -137,7 +114,7 @@ const Products = () => {
                                             });
                                         }}
                                     />
-                                    <label>Incredible Frozen Table</label>
+                                    <label>Morar and Sons</label>
                                 </div>
                                 <div className={styles.input_label_container}>
                                     <input
@@ -154,7 +131,7 @@ const Products = () => {
                                             });
                                         }}
                                     />
-                                    <label>Tasty Wooden Car</label>
+                                    <label>Quitzon LLC</label>
                                 </div>
                             </div>
                         )}

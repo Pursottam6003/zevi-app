@@ -1,19 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { Logo } from "../../../assets/images"
-import { RiSearch2Line } from "react-icons/ri";
-import styles from "./ProductsNav.module.scss"
+import styles from "./ProductsNav.module.scss";
 
-const ProductsNavBar = () => {
+import { ProductType } from "../../../assets/data/FakerData";
+
+
+interface ProductsNavBarProps {
+    products: ProductType[];
+    setFilteredProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
+}
+
+const ProductsNavBar: React.FC<ProductsNavBarProps> = ({
+    products,
+    setFilteredProducts,
+}) => {
+    const [searchQuery, setSearchQuery] = useState("");
+
+    useEffect(() => {
+        setFilteredProducts(products);
+    }, [products]);
+
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const query = event.target.value;
+        setSearchQuery(query);
+
+        const filteredProducts = products.filter((product) =>
+            product.productName.toLowerCase().includes(query.toLowerCase())
+        );
+        setFilteredProducts(filteredProducts);
+    };
+
     return (
-        <div className={styles.products_navbar}>
-            <div></div>
-            <form className={styles.input_container}>
-                <input type="text" className={styles.home_input} placeholder="Search..." />
-                <button className={styles.search_icon_container}>
-                    <RiSearch2Line size="24" />
-                </button>
-            </form>
+        <div className={styles.searchBox}>
+            <label htmlFor="q">
+                <input
+                    name="q"
+                    type="text"
+                    placeholder="Search"
+                    autoComplete="off"
+                    value={searchQuery}
+                    onChange={handleSearch}
+                />
+            </label>
         </div>
     );
 };
