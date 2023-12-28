@@ -77,8 +77,7 @@ const Products = () => {
         setProducts(filteredData);
     }, [multipleFilters, tempProducts]);
 
-    console.log(products)
-    console.log(tempProducts)
+
     return (
         <div className={styles.products_page}>
             <ProductsNavBar products={products} setFilteredProducts={setProducts} />
